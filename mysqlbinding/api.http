@@ -1,0 +1,30 @@
+# Create a user
+POST http://localhost:3500/v1.0/invoke/user-service/method/users
+Content-Type: application/json
+
+{
+    "username" : "pepe",
+    "email": "pinkpanter@foo.es"
+}
+
+###
+
+# Get all users
+GET http://localhost:3500/v1.0/invoke/user-service/method/users
+Content-Type: application/json
+
+###
+
+# Get a specified user
+GET http://localhost:3500/v1.0/invoke/user-service/method/users/pinkpanter
+Content-Type: application/json
+
+###
+
+# Create user directly to app port
+POST http://localhost:5000/users
+Content-Type: application/json
+{
+    "username" : "pepe",
+    "email": "pinkpanter@foo.es"
+}

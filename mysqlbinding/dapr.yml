@@ -1,0 +1,9 @@
+version: 1
+common: # optional section for variables shared across apps
+  resourcesPath: ./components # any dapr resources to be shared across apps
+apps:
+  - appID: users-service
+    appDirPath: ./src/http
+    appPort: 5000
+    daprHTTPPort: 3500
+    command: ["python", "app.py"]
